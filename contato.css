@@ -33,7 +33,7 @@ body {
     color: rgba(255, 255, 255, 0.04); /* Texto branco */
 }
 .form-label, .form-control, .form-select {
-    color: white; /* Texto dos labels e campos brancos */
+    color: rgb(0, 0, 0); /* Texto dos labels e campos brancos */
 }
 .form-control {
     background-color: rgba(255, 255, 255, 0.201); /* Cor de fundo dos campos de entrada */

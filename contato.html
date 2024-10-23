@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italo Melo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="contato.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">
+                <img src="logo.png" class="logo"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experiencia.html">Experiência</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex justify-content-center align-items-center flex-column" style="min-height: 80vh;">
+        <h2>CONTATO</h2>
+        <br>
+        <div class="form-container">
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Envie uma mensagem:</legend>
+        
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="exemplo@dominio.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensagem</legend>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes do Serviço</legend>
+                    <div class="mb-3">
+                        <label for="language" class="form-label">Língua Aplicada</label>
+                        <select class="form-select" id="language" required>
+                            <option value="">Selecione uma língua</option>
+                            <option value="en">Inglês</option>
+                            <option value="es">Espanhol</option>
+                            <option value="fr">Francês</option>
+                            <option value="pt-br">Português (pt-br)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fileUpload" class="form-label">Carregar Protótipo</label>
+                        <input type="file" class="form-control" id="fileUpload" accept=".pdf, .doc, .docx, .jpeg, .png" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="preferredLanguages" class="form-label">Linguagens Preferidas</label>
+                        <select class="form-select" id="preferredLanguages" multiple required>
+                            <option value="java">Java</option>
+                            <option value="python">Python</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="csharp">C#</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tipo de Banco de Dados Recomendado</label>
+                        <div>
+                            <input type="radio" id="sql" name="dbType" value="sql" required>
+                            <label for="sql" class="form-label">SQL</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="nosql" name="dbType" value="nosql" required>
+                            <label for="nosql" class="form-label">NoSQL</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="meetingShift" class="form-label">Turno Preferido para Reuniões</label>
+                        <select class="form-select" id="meetingShift" required>
+                            <option value="">Selecione um turno</option>
+                            <option value="morning">Manhã</option>
+                            <option value="afternoon">Tarde</option>
+                            <option value="evening">Noite</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="preferredTime" class="form-label">Melhor Horário Sugerido para Reuniões</label>
+                        <input type="time" class="form-control" id="preferredTime" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="deliveryDate" class="form-label">Previsão de Entrega Desejada</label>
+                        <input type="date" class="form-control" id="deliveryDate" required>
+                    </div>
+                </fieldset>
+                
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+                <button type="submit" class="btn btn-light">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kqtD0rTI8QR5j7h3dPQVp71Vb7rj2Z11lbjOg6V1ZmV0jY8ZjBdW5NOz8ZX01/hU" crossorigin="anonymous"></script>
+    <script>
+        // Validação do formulário
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault(); // Evita o envio se o formulário não for válido
+                alert("Por favor, preencha todos os campos obrigatórios.");
+            }
+        });
+    </script>
+</body>
+</html>
